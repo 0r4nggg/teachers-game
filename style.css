@@ -119,18 +119,24 @@ footer {
 }
 
 /* Gamemode */
- /* ===== モードカードのデザインを強化 ===== */
+ /* ===== ゲームモードカードレイアウト ===== */
 .modes {
   background: rgba(255, 255, 255, 0.9);
   margin: 40px auto;
-  padding: 50px 30px;
+  padding: 40px;
   border-radius: 16px;
-  max-width: 1000px;
+  max-width: 1100px;
   box-shadow: 0 0 20px rgba(0, 100, 255, 0.2);
-  animation: fadeIn 1.2s ease forwards;
+
+  /* ← ここが重要！カードを並べる設定 */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
 }
 
-/* カードのグリッドレイアウト */
+/* 各カードの見た目 */
 .modes a.mode-card {
   display: block;
   background: linear-gradient(135deg, #ffffff, #f0f8ff);
@@ -138,35 +144,29 @@ footer {
   border: 1px solid rgba(0, 100, 255, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 25px;
-  margin: 20px;
   text-decoration: none;
   color: #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* ホバーした時に少し浮かせる */
+/* カードにマウスを乗せた時の浮遊感 */
 .modes a.mode-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 20px rgba(0, 150, 255, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(0, 150, 255, 0.4);
+  background: linear-gradient(135deg, #ffffff, #e0f0ff);
 }
 
-/* カード内テキスト */
+/* カード内タイトル */
 .mode-card h3 {
   font-size: 1.3rem;
   color: #007bff;
   margin-bottom: 10px;
 }
 
+/* カード内テキスト */
 .mode-card p {
   font-size: 1rem;
   color: #444;
+  line-height: 1.6;
 }
 
-/* グリッド配置（2列レイアウト） */
-.modes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  align-items: stretch;
-}
