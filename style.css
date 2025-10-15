@@ -34,7 +34,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background: url('https://placehold.co/1200x400') center/cover no-repeat;
+  background: url('images/Teachers-main.png') center/cover no-repeat;
   height: 60vh;
   display: flex;
   justify-content: center;
