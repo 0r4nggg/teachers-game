@@ -170,3 +170,21 @@ footer {
   line-height: 1.6;
 }
 
+/* 通常モードカード共通デザインはそのまま */
+/* 期間限定モードカード（赤系） */
+.modes a.mode-card.limited {
+  background: linear-gradient(135deg, #ffe5e5, #fff0f0);
+  border-left: 6px solid #ff4d4d;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+.modes a.mode-card.limited:hover {
+  background: linear-gradient(135deg, #fff0f0, #ffe0e0);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(255, 60, 60, 0.5);
+}
+
+.modes a.mode-card.limited h3 {
+  color: #ff1a1a;
+}
+
